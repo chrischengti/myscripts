@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+  set user ziguang
+  set host 49.213.12.14
+  set password xxxxxxxx
+  set timeout -1
+ 
+  spawn ssh -f -NC -o TCPKeepAlive=yes -D7070 $user@$host
+  expect "*assword:*"
+  send "$password\r"
+  
+  interact
+  #expect eof

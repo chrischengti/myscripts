@@ -1,0 +1,1 @@
+sudo /usr/sbin/sshd -f /etc/sshd_config
