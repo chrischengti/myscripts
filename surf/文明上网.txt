@@ -1,0 +1,33 @@
+chensy
+haiwen
+ziguang
+guozhao
+
+IP: 49.213.12.14 22 
+PWD: xxxxx
+
+Proxy SwitchyOmega
+http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
+http://www.bitvise.com/ssh-client-license
+
+
+ssh -f -NC -D7070 USER@HOST
+
+
+google 107.178.220.64 443 
+
+nohup ssh -f -NC -o TCPKeepAlive=yes -D10.240.74.108:443 -i google_rsa ziguang@10.240.74.108
+
+
+
+yum install -y ppp iptables -y
+yum -y install pptpd
+
+
+http://bbs.aliyun.com/read/231812.html
+
+
+-A FORWARD -p gre -j ACCEPT
+-A FORWARD -s 192.168.0.0/24 -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -j TCPMSS --set-mss 1356
+
+-A POSTROUTING -s 192.168.0.0/24 -o eth1 -j MASQUERADE
